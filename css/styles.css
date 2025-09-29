@@ -88,3 +88,17 @@ footer {
     color: white;
     text-align: center;
 }
+
+.projects {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.projects-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
