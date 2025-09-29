@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --primary-color: rgb(0, 0, 138);
+    --secondary-color: rgb(82, 82, 82);
+}
+
+.container-styles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 1fr 4fr 4fr;
+    grid-template-areas: "nav nav nav" "header header header" "main main main" "footer footer footer";
+}
+
+#header-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid black;
+}
+
+#mission-statement-text {
+    margin: 50px 100px;
+    padding: 20px;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    grid-area: nav;
+    border: 2px solid black;
+    background-color: black;
+    padding: 20px;
+}
+
+.nav-links-styles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondary-color);
+}
+
+.nav-link-styles {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center
+    color: var(--primary-color);
+}
+
+#header-intro {
+    color: whitesmoke;
+}
+header {
+    grid-area: header;
+    border: 2px solid black;
+    background-color: black;
+    
+}
+
+main {
+    grid-area: main;
+    border: 2px solid black;
+}
+
+footer {
+    grid-area: footer;
+    border: 2px solid black;
+}
+
+.img-round {
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border: 3px solid rgb(0, 0, 138);
+}
+
+.mission-box {
+    border-left: 2px solid var(--primary-color);
+    border-right: 2px solid var(--primary-color);
+    margin: 20px;
+    padding: 20px;
+    width: 40%;
+    color: white;
+    text-align: center;
+}
