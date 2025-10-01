@@ -5,7 +5,7 @@
 :root {
     --primary-color: rgb(0, 0, 138);
     --secondary-color: rgb(82, 82, 82);
-    --tertiary-color: rgb(20, 20, 20);
+    --tertiary-color: rgb(49, 49, 49);
 }
 
 .container-styles {
@@ -96,11 +96,26 @@ footer {
 }
 
 .projects {
-    background-color: var(--tertiary-color);
+    background-color: var(--secondary-color);
     color: white;
     text-align: center;
     padding: 20px;
     height: 50%;
+}
+
+.projects-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    background-color: black;
+    height: 100px;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+.projects-title h2{
+    font-size: 50px;
 }
 
 .projects-cards {
@@ -134,4 +149,9 @@ footer {
 .card-box-text ul {
     list-style-type: square;
     text-align: left;
+}
+
+#about {
+    background-color: black;
+    height: 50%;
 }
