@@ -5,7 +5,7 @@
 :root {
     --primary-color: rgb(0, 0, 138);
     --secondary-color: rgb(82, 82, 82);
-    --tertiary-color: rgb(49, 49, 49);
+    --tertiary-color: rgb(126, 126, 112);
 }
 
 .container-styles {
@@ -13,6 +13,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 50px 1fr 4fr 4fr;
     grid-template-areas: "nav nav nav" "header header header" "main main main" "footer footer footer";
+    position: relative;
 }
 
 #header-content {
@@ -33,9 +34,11 @@
 
 nav {
     grid-area: nav;
-    border: 2px solid black;
     background-color: black;
     padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
 }
 
 .nav-links-styles {
@@ -49,7 +52,7 @@ nav {
     width: 40%;
     display: flex;
     justify-content: space-evenly;
-    align-items: center
+    align-items: center;
     color: var(--primary-color);
 }
 
@@ -58,19 +61,21 @@ nav {
 }
 header {
     grid-area: header;
-    border: 2px solid black;
     background-color: black;
+    height: 100vh;
     
 }
 
 main {
     grid-area: main;
-    border: 2px solid black;
+}
+
+main section {
+    height: 45%;
 }
 
 footer {
     grid-area: footer;
-    border: 2px solid black;
 }
 
 .img-round {
@@ -96,33 +101,28 @@ footer {
 }
 
 .projects {
-    background-color: var(--secondary-color);
     color: white;
     text-align: center;
     padding: 20px;
-    height: 50%;
+    border-top: 2px solid white;
+    background-color: var(--secondary-color);
 }
 
 .projects-title {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 50px;
     background-color: black;
     height: 100px;
     margin-left: 400px;
     margin-right: 400px;
+    border-radius: 25%;
+    border: 2px solid var(--primary-color);
 }
 
 .projects-title h2{
     font-size: 50px;
-}
-
-.projects-cards {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px;
 }
 
 .card-position {
@@ -130,7 +130,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 100%;
+    height: 90%;
 }
 
 .card-box {
@@ -138,7 +138,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 40%;
+    width: 50%;
     background-color: black;
 }
 
@@ -151,7 +151,47 @@ footer {
     text-align: left;
 }
 
-#about {
+.about {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    border-top: 2px solid white;
+    height: 115vh;
+}
+
+.about-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
     background-color: black;
-    height: 50%;
+    height: 100px;
+    margin-left: 400px;
+    margin-right: 400px;
+    border-radius: 25%;
+    border: 2px solid var(--primary-color);
+    background-color: black;
+}
+
+.about-title h2{
+    font-size: 50px;
+    color: white;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+    margin-top: 100px;
+}
+
+.skills h3 {
+    margin: 20px auto;
+}
+
+.skills-about-me {
+    margin: 50px 500px;
+    color: white;
 }
