@@ -1,0 +1,51 @@
+:root {
+    --primary-color: rgb(0, 0, 138);
+    --secondary-color: rgb(83, 70, 62);
+    --tertiary-color: rgb(126, 126, 112);
+}
+
+
+.container-styles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 100vh 1fr;
+    grid-template-areas: "nav nav nav" "main main main" "footer footer footer";
+    position: relative;
+}
+
+main {
+    grid-area: main;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+}
+
+footer {
+    grid-area: footer;
+}
+
+nav {
+    grid-area: nav;
+    background-color: black;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.nav-links-styles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondary-color);
+}
+
+.nav-link-styles {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--primary-color);
+}
